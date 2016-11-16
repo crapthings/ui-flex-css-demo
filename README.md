@@ -14,4 +14,4 @@ meteor
 
 展示用 ui-flex-css 写一个桌面版微信客户端的布局界面
 
-https://github.com/crapthings/ui-flex-css-demo/WechatIMG1.jpeg
+![wechat layout](https://raw.githubusercontent.com/crapthings/ui-flex-css-demo/master/WechatIMG1.jpeg)

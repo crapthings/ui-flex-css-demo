@@ -35,7 +35,7 @@
     </div>
 
     <!-- 滚动区域 -->
-    <div class='ui-flex-scroll' style='width: 480px; background-color: {{rc}};'>
+    <div class='ui-flex-swag-scroll' style='width: 480px; background-color: {{rc}};'>
       {{#each list}}
         <div>
           <h3>{{title}}</h3>
@@ -47,7 +47,14 @@
     <!--  -->
     <div class='ui-flex-column ui-flex-1'>
       <div></div>
-      <div class='ui-flex-1 ui-flex-scroll'></div>
+      <div class='ui-flex-1 ui-flex-swag-scroll'>
+        {{#each list}}
+          <div>
+            <h3>{{title}}</h3>
+            <p>{{content}}</p>
+          </div>
+        {{/each}}
+      </div>
       <div style='height: 240px;'>hello</div>
     </div>
 

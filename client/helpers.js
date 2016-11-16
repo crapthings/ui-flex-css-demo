@@ -2,6 +2,8 @@ import _ from 'lodash'
 import faker from 'faker'
 import randomcolor from 'randomcolor'
 
+Blaze._allowJavascriptUrls()
+
 Template.registerHelper('rc', function () {
   return randomcolor()
 })

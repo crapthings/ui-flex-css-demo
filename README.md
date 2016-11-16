@@ -2,4 +2,6 @@
 
 ### how to
 
-> git clone https://github.com/crapthings/ui-flex-css-demo --recursive
+```
+git clone https://github.com/crapthings/ui-flex-css-demo --recursive
+```

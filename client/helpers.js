@@ -2,6 +2,8 @@ import _ from 'lodash'
 import faker from 'faker'
 import randomcolor from 'randomcolor'
 
+Faker = faker
+
 Blaze._allowJavascriptUrls()
 
 Template.registerHelper('rc', function () {
@@ -13,4 +15,8 @@ Template.registerHelper('list', function(length = 50) {
     title: faker.lorem.sentence(),
     content: faker.lorem.paragraphs(),
   }))
+})
+
+Template.registerHelper('avatarUrl', function () {
+  return faker.internet.avatar()
 })

@@ -1,28 +1,38 @@
 <template name='wechat'>
   <!-- 布局 灵活高度 灵活行 -->
-  <div class='ui-flex-fhvp ui-flex-row' style='background-color: {{rc}};'>
+  <div id='ui-wechat' class='ui-flex-fhvp ui-flex-row' style='background-color: #fff;'>
 
     <!-- 左侧栏 列 -->
-    <div class='ui-flex-column' style='width: 120px; background-color: {{rc}};'>
+    <div class='ui-flex-column' style='width: 80px; background-color: {{rc}};'>
 
       <!--  -->
       <div class='ui-flex-row' style='color: white; background-color: {{rc}};'>
-        <a href='javascript:;' class="ui-flex-1 ui-flex-center" style='padding: 8px 0; background-color: {{rc}};'>
-          <small>关</small>
+        <a href='javascript:;' class='ui-flex-1 ui-flex-center' style='padding: 8px 0; background-color: {{rc}};'>
+          <i class='fa fa-window-close-o' aria-hidden='true'></i>
         </a>
-        <a href='javascript:;' class="ui-flex-1 ui-flex-center" style='padding: 8px 0; background-color: {{rc}};'>
-          <small>小</small>
+        <a href='javascript:;' class='ui-flex-1 ui-flex-center' style='padding: 8px 0; background-color: {{rc}};'>
+          <i class='fa fa-window-minimize' aria-hidden='true'></i>
         </a>
-        <a href='javascript:;' class="ui-flex-1 ui-flex-center" style='padding: 8px 0; background-color: {{rc}};'>
-          <small>大</small>
+        <a href='javascript:;' class='ui-flex-1 ui-flex-center' style='padding: 8px 0; background-color: {{rc}};'>
+          <i class='fa fa-window-maximize' aria-hidden='true'></i>
         </a>
+      </div>
+
+      <div class='ui-flex-center' style='padding: 16px 0;'>
+        <img class='ui-img-circle ui-img-avatar' src='{{avatarUrl}}' alt=''>
       </div>
 
       <!--  -->
       <div>
-        <a href='javascript:;' class='ui-flex-center' style='width: 120px; padding: 16px 0; background-color: {{rc}};'>Messages</a>
-        <a href='javascript:;' class='ui-flex-center' style='width: 120px; padding: 16px 0; background-color: {{rc}};'>Contracts</a>
-        <a href='javascript:;' class='ui-flex-center' style='width: 120px; padding: 16px 0; background-color: {{rc}};'>Tools</a>
+        <a href='javascript:;' class='ui-flex-center' style='padding: 16px 0; background-color: {{rc}};'>
+          <i class='fa fa-comment-o fa-2x' aria-hidden='true'></i>
+        </a>
+        <a href='javascript:;' class='ui-flex-center' style='padding: 16px 0; background-color: {{rc}};'>
+          <i class='fa fa-address-book fa-2x' aria-hidden='true'></i>
+        </a>
+        <a href='javascript:;' class='ui-flex-center' style='padding: 16px 0; background-color: {{rc}};'>
+          <i class='fa fa-cubes fa-2x' aria-hidden='true'></i>
+        </a>
       </div>
 
       <!-- flex divider -->
@@ -30,18 +40,26 @@
 
       <!--  -->
       <div>
-        <a href='javascript:;' class='ui-flex-center' style='width: 120px; padding: 16px 0; background-color: {{rc}};'>Settings</a>
+        <a href='javascript:;' class='ui-flex-center' style='padding: 16px 0; background-color: {{rc}};'>
+          <i class='fa fa-cog fa-2x' aria-hidden='true'></i>
+        </a>
       </div>
     </div>
 
     <!-- 滚动区域 -->
-    <div class='ui-flex-swag-scroll' style='width: 480px; background-color: {{rc}};'>
-      {{#each list}}
-        <div>
-          <h3>{{title}}</h3>
-          <p>{{content}}</p>
-        </div>
-      {{/each}}
+    <div class='ui-flex-column' style='width: 360px;'>
+      <div class='ui-flex-row ui-flex-center' style='padding: 8px; background-color: {{rc}};'>
+        <input type='text' class='ui-flex-1' placeholder='search'>
+        <input type='button' style='border: none;' value='+'>
+      </div>
+      <div class='ui-flex-1 ui-flex-swag-scroll'>
+        {{#each list}}
+          <div class='ui-hack-border-offset' style='background-color: {{rc}};'>
+            <h3>{{title}}</h3>
+            <p>{{content}}</p>
+          </div>
+        {{/each}}
+      </div>
     </div>
 
     <!--  -->

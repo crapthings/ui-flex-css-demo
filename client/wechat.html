@@ -1,0 +1,56 @@
+<template name='wechat'>
+  <!-- 布局 灵活高度 灵活行 -->
+  <div class='ui-flex-fhvp ui-flex-row' style='background-color: {{rc}};'>
+
+    <!-- 左侧栏 列 -->
+    <div class='ui-flex-column' style='width: 120px; background-color: {{rc}};'>
+
+      <!--  -->
+      <div class='ui-flex-row' style='color: white; background-color: {{rc}};'>
+        <a href='javascript:;' class="ui-flex-1 ui-flex-center" style='padding: 8px 0; background-color: {{rc}};'>
+          <small>关</small>
+        </a>
+        <a href='javascript:;' class="ui-flex-1 ui-flex-center" style='padding: 8px 0; background-color: {{rc}};'>
+          <small>小</small>
+        </a>
+        <a href='javascript:;' class="ui-flex-1 ui-flex-center" style='padding: 8px 0; background-color: {{rc}};'>
+          <small>大</small>
+        </a>
+      </div>
+
+      <!--  -->
+      <div>
+        <a href='javascript:;' class='ui-flex-center' style='width: 120px; padding: 16px 0; background-color: {{rc}};'>Messages</a>
+        <a href='javascript:;' class='ui-flex-center' style='width: 120px; padding: 16px 0; background-color: {{rc}};'>Contracts</a>
+        <a href='javascript:;' class='ui-flex-center' style='width: 120px; padding: 16px 0; background-color: {{rc}};'>Tools</a>
+      </div>
+
+      <!-- flex divider -->
+      <div class='ui-flex-1'></div>
+
+      <!--  -->
+      <div>
+        <a href='javascript:;' class='ui-flex-center' style='width: 120px; padding: 16px 0; background-color: {{rc}};'>Settings</a>
+      </div>
+    </div>
+
+    <!-- 滚动区域 -->
+    <div class='ui-flex-scroll' style='width: 480px; background-color: {{rc}};'>
+      {{#each list}}
+        <div>
+          <h3>{{title}}</h3>
+          <p>{{content}}</p>
+        </div>
+      {{/each}}
+    </div>
+
+    <!--  -->
+    <div class='ui-flex-column ui-flex-1'>
+      <div></div>
+      <div class='ui-flex-1 ui-flex-scroll'></div>
+      <div style='height: 240px;'>hello</div>
+    </div>
+
+  </div>
+
+</template>
